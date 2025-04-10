@@ -108,7 +108,6 @@ class StadiumCountViewSet(APIView):
 
 class ConfirmPaymentByManagerView(APIView):
     permission_classes = [IsAuthenticated, IsManagerUser]
-
     def post(self, request, booking_id):
         try:
             booking = StadiumBooking.objects.get(id=booking_id)
